@@ -15,26 +15,14 @@ $(function() {
     });
 });
 
-$('#serv1').click(function(){
-    $('#serviceModal1').load('../includes/serviceModal1.html');
-});
-
-$('#serv2').click(function(){
-    $('#serviceModal1').load('../includes/serviceModal2.html');
-});
-
-$('#serv3').click(function(){
-    $('#serviceModal1').load('../includes/serviceModal3.html');
-});
-
-$(function call_modal(){
-    
-});
+function call_modal(modal){
+    return $('#serviceModal1').load('../includes/serviceModal'+modal+'.html');
+};
 
 // Highlight the top nav as scrolling occurs
 $('body').scrollspy({
     target: '.navbar-fixed-top'
-})
+});
 
 // Closes the Responsive Menu on Menu Item Click
 $('.navbar-collapse ul li a').click(function() {
