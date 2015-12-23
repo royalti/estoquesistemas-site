@@ -15,6 +15,22 @@ $(function() {
     });
 });
 
+$('#serv1').click(function(){
+    $('#serviceModal1').load('../includes/serviceModal1.html');
+});
+
+$('#serv2').click(function(){
+    $('#serviceModal1').load('../includes/serviceModal2.html');
+});
+
+$('#serv3').click(function(){
+    $('#serviceModal1').load('../includes/serviceModal3.html');
+});
+
+$(function call_modal(){
+    
+});
+
 // Highlight the top nav as scrolling occurs
 $('body').scrollspy({
     target: '.navbar-fixed-top'
@@ -23,4 +39,20 @@ $('body').scrollspy({
 // Closes the Responsive Menu on Menu Item Click
 $('.navbar-collapse ul li a').click(function() {
     $('.navbar-toggle:visible').click();
+});
+
+$(".pop").popover({ trigger: "manual" , html: true, animation:false})
+    .on("mouseenter", function () {
+    var _this = this;
+    $(this).popover("show");
+    $(".popover").on("mouseleave", function () {
+    $(_this).popover('hide');
+    });
+    }).on("mouseleave", function () {
+    var _this = this;
+    setTimeout(function () {
+    if (!$(".popover:hover").length) {
+    $(_this).popover("hide");
+    }
+    }, 300);
 });
