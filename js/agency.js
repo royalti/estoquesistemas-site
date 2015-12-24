@@ -15,10 +15,6 @@ $(function() {
     });
 });
 
-function call_modal(modal){
-    return $('#serviceModal1').load('../includes/serviceModal'+modal+'.html');
-};
-
 // Highlight the top nav as scrolling occurs
 $('body').scrollspy({
     target: '.navbar-fixed-top'
