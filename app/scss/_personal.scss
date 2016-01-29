@@ -1,0 +1,39 @@
+$azul-logo: #004c99;
+
+#navlogo {
+    font-family: 'Orbitron', sans-serif;
+    text-shadow: 1px 1px 1px #000;
+    color: #3f7fd8;
+}
+
+#navright {
+
+}
+
+#tabela {
+	padding: 10px;
+	background-color: #FFF;
+	color: #000;
+}
+
+#navright li a {
+    text-shadow: 1px 1px 1px #000;
+}
+
+#portfolio {
+	background-color: $azul-logo;	
+	color: #FFF;
+}
+
+#content {
+	background-color: $azul-logo;	
+	color: #FFF;
+}
+
+#sub-heading {
+	color: #E4E4E4;
+}
+
+.portfolio-caption h4 {
+	color: #000;
+}
