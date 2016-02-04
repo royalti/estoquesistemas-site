@@ -10,9 +10,9 @@ var config = {
 	buildFilesFoldersRemove:[
 		'build/scss/', 
 		'build/js/!(*.min.js)',
-		'build/bower.json',
-		'build/bower_components/',
-		'build/maps/'
+		'build/bower.json'
+		//'build/bower_components/',
+		//'build/maps/'
 	]
 };
 
