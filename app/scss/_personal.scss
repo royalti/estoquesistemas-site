@@ -1,0 +1,130 @@
+$azul-logo: #004c99;
+
+#navlogo {
+    font-family: 'Orbitron', sans-serif;
+    text-shadow: 1px 1px 1px #000;
+    color: #3f7fd8;
+}
+
+#navright {
+
+}
+
+#tabela {
+	padding: 10px;
+	background-color: #FFF;
+	color: #000;
+}
+
+#navright li a {
+    text-shadow: 1px 1px 1px #000;
+}
+
+#portfolio {
+	background-color: $azul-logo;	
+	color: #FFF;
+}
+
+#content {
+	background-color: $azul-logo;	
+	color: #FFF;
+}
+
+#sub-heading {
+	color: #E4E4E4;
+}
+
+.portfolio-caption h4 {
+	color: #000;
+}
+
+.content-item {
+    margin: 0 0 15px;
+    right: 0;
+    background-color: #F5F5F5;
+    text-align: center;
+}
+
+#content .content-item .content-caption {
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: $azul-logo;
+    text-align: center;
+    padding: 25px
+}
+
+#content .content-item a .content-caption h4 {
+	color: #FFF;
+}
+
+#content .content-item a .content-caption:hover {
+	background-color: #333;
+    color: #000;
+}
+
+#content .content-item .content-caption h4 {
+    text-transform: none;
+    margin: 0;
+    color: #000;
+}
+
+#content .content-item .content-caption p {
+    font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-style: italic;
+    font-size: 16px;
+    margin: 0
+}
+
+#content * {
+    z-index: 2
+}
+
+@media (min-width:767px) {
+    #content .content-item {
+        margin: 0 0 30px
+    }
+}
+
+/* Tab Navigation */
+.nav-tabs {
+    margin: 0;
+    padding: 0;
+    border: 0;    
+}
+.nav-tabs > li > a {
+    font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background: #DADADA;
+    border-radius: 0;
+    box-shadow: inset 0 -8px 7px -9px rgba(0,0,0,.4),-2px -2px 5px -2px rgba(0,0,0,.4);
+}
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:hover {
+    font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background: #F5F5F5;
+    box-shadow: inset 0 0 0 0 rgba(0,0,0,.4),-2px -3px 5px -2px rgba(0,0,0,.4);
+}
+
+/* Tab Content */
+.tab-pane {
+    background: #F5F5F5;
+    box-shadow: 0 0 4px rgba(0,0,0,.4);
+    border-radius: 0;
+    text-align: center;
+    padding: 10px;
+    color: $azul-logo;
+}
+
+.cc-map-wrapper {
+        position: relative;
+        padding-bottom: 56.25%; /* 16:9 */
+        padding-top: 25px;
+        height: 0;
+}
+.cc-map-wrapper iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+} 
+
