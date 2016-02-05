@@ -32,7 +32,9 @@ var gulp = require('gulp'),
 	concat = require('gulp-concat'),
 	uglify = require('gulp-uglify'),
 	rename = require('gulp-rename'),
-	del = require('del');
+	del = require('del'),
+	gutil = require('gulp-util'),
+	ftp = require('vinyl-ftp');
 
 
 // ////////////////////////////////////////////////
@@ -139,6 +141,31 @@ gulp.task('build:remove', ['build:copy'], function (cb) {
 
 gulp.task('build', ['build:copy', 'build:remove']);
 
+// ////////////////////////////////////////////////
+// DEPLOY with VINYL
+// // /////////////////////////////////////////////
+
+gulp.task( 'deploy', function () {
+
+    var conn = ftp.create( {
+        host:     'estoquesistemas.com.br',
+        user:     'estoques',
+        password: '9fdba5a1',
+        parallel: 10,
+        log:      gutil.log
+    } );
+
+    var globs = [
+        'build/**'
+    ];
+
+    // using base = '.' will transfer everything to /public_html correctly
+    // turn off buffering in gulp.src for best performance
+
+    return gulp.src( globs, { base: './build/', buffer: false } )
+        .pipe( conn.newerOrDifferentSize( '/public_html/' ) ) // only upload newer files
+        .pipe( conn.dest( '/public_html/' ) );
+} );
 
 // ////////////////////////////////////////////////
 // Watch Tasks
